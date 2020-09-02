@@ -1,0 +1,160 @@
+/* Fonts */
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../../fonts/Roboto-Fonts/Roboto-Light.woff2') format('woff2'),
+        url('../../fonts/Roboto-Fonts/Roboto-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Reg';
+    src: url('../../fonts/Roboto-Fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../../fonts/Roboto-Fonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff');
+}
+
+/* End of Fonts */
+
+/* Imported _Mixins For Media Queries ==== 
+========================================*/
+@import "../css/mixins";
+
+/* Global Variable Styles ==== 
+=========Family ============*/
+$font-bold: 'Roboto-Bold';
+$font-normal: 'Roboto-Reg';
+$font-light: 'Roboto-Light';
+
+/* Font Sizes ================
+=========Sizes==============*/
+$font-size-cta-button: 1rem;
+$font-size-widget-content-text: 1rem;
+$font-size-widget-headers: 1.5rem;
+
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+
+
+/* Begin Widget Styles */
+.widget-container-outer-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .widget-container-inner-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+
+        .widget {
+            margin: 10px;
+            width: 405px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+            border: 1px solid #d5d5d5;
+
+            /* Media Queries - Removing extra Margin On Smaller and Mobile Devices */ 
+            @include respond(small-laptop) {
+                margin: 10px 0;
+            }
+
+            @include respond(tablet-mobile) {
+                margin: 10px 0;
+            }
+
+            .widget-img {
+                width: 100%;
+            }
+
+            h3 {
+                margin-top: 20px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: 32px;
+                font-family: $font-bold;
+                color: #333333;
+            }
+
+            p {
+                text-align: center;
+                margin: 10px auto 10px;
+                max-width: 90%;
+                height: 53px;
+                font-family: $font-normal;
+                font-size: $font-size-widget-content-text;
+                letter-spacing: 0;
+                line-height: 20px;
+                color: #333333;
+                position: relative;
+                top: 5px;
+
+
+            }
+
+            .widget-cta-btn {
+                font-family: $font-normal;
+                font-size: $font-size-cta-button;
+                cursor: pointer;
+                padding: 0.25em 0.75em;
+                position: relative;
+                width: 156px;
+                margin: 10px auto 20px;
+                border-radius: 20px;
+                color: #ffffff;
+                text-align: center;
+                line-height: 21px;
+                letter-spacing: 0;
+                border: 1px solid #481F5D;
+                /* Mixin Creates All Button States */
+                @include button-bg(#481F5D);
+                border-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+
+
+                &::after {
+                    content: url(../img/arrows/navigate_next-white-24dp.svg);
+                    margin-top: 5px;
+                }
+
+
+            }
+            /* Media Queries - Spans Widgets Across The Page Responsively */
+            @include respond(small-laptop) {
+                width: 100%;
+            }
+
+            @include respond(tablet-mobile) {
+                width: 100%;
+            }
+        }
+        /* Media Queries - Sets Widgets To Stack On Smaller and Mobile Devices */
+        @include respond(small-laptop) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include respond(tablet-mobile) {
+            flex-direction: column;
+        }
+    }
+}

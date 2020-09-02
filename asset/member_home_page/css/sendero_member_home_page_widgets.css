@@ -1,0 +1,227 @@
+/* Fonts */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../../fonts/Roboto-Fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto-Reg';
+  src: url("../../fonts/Roboto-Fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../../fonts/Roboto-Fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Bold.woff2") format("woff");
+}
+
+/* End of Fonts */
+/* Imported _Mixins For Media Queries ==== 
+========================================*/
+/*=== Button States ===*/
+/*=== Link Styles ===*/
+/* Global Variable Styles ==== 
+=========Family ============*/
+/* Font Sizes ================
+=========Sizes==============*/
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+/* Begin Widget Styles */
+.widget-container-outer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  /* Media Queries - Sets Widgets To Stack On Smaller and Mobile Devices */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
+  margin: 10px;
+  width: 405px;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  /* Media Queries - Removing extra Margin On Smaller and Mobile Devices */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* Media Queries - Spans Widgets Across The Page Responsively */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
+    margin: 10px 0;
+  }
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-img {
+  width: 100%;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget h3 {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 32px;
+  font-family: "Roboto-Bold";
+  color: #333333;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget p {
+  text-align: center;
+  margin: 10px auto 10px;
+  max-width: 90%;
+  height: 53px;
+  font-family: "Roboto-Reg";
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 20px;
+  color: #333333;
+  position: relative;
+  top: 5px;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn {
+  font-family: "Roboto-Reg";
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25em 0.75em;
+  position: relative;
+  width: 156px;
+  margin: 10px auto 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 21px;
+  letter-spacing: 0;
+  border: 1px solid #481F5D;
+  /* Mixin Creates All Button States */
+  background: #481F5D;
+  border-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn:hover {
+  background: #30153e;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn:active {
+  background: #1c0c24;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 3px lightskyblue;
+          box-shadow: 0 0 0 3px lightskyblue;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn::after {
+  content: url(../img/arrows/navigate_next-white-24dp.svg);
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=sendero_member_home_page_widgets.css.map */
