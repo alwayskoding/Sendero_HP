@@ -1,0 +1,288 @@
+/* Fonts */
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../../fonts/Roboto-Fonts/Roboto-Light.woff2') format('woff2'),
+        url('../../fonts/Roboto-Fonts/Roboto-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Reg';
+    src: url('../../fonts/Roboto-Fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../../fonts/Roboto-Fonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff');
+}
+
+/* End of Fonts */
+
+/* Imported _Mixins For Media Queries ==== 
+========================================*/
+@import "../css/mixins";
+
+/* Global Variable Styles ==== 
+=========Family ============*/
+$font-bold: 'Roboto-Bold';
+$font-normal: 'Roboto-Reg';
+$font-light: 'Roboto-Light';
+
+/* Font Sizes ================
+=========Sizes==============*/
+$font-size-user: 2rem;
+$font-size-header: 1.625rem;
+$font-size-secondary: 1.125rem;
+$font-size-swiper-cta: 1.5rem;
+$font-size-cta-button: 1rem;
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+.quick-access-outer-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+
+    h1 {
+        font-family: $font-normal, sans-serif;
+        font-size: $font-size-user;
+        letter-spacing: 0;
+        line-height: 43px;
+        color: #56A3D5;
+    }
+
+    .quick-access-inner-wrapper {
+        display: flex;
+
+        /* 950 */
+        @include respond(small-laptop) {
+            flex-direction: column !important;
+        }
+
+        /* 600 */
+        @include respond(tablet-mobile) {
+            flex-direction: column !important;
+        }
+
+        .quick-access-container {
+            background: linear-gradient(135deg, #56A3D5 0%, #5DA1BF 44.06%, #70A494 100%);
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* 950 */
+            @include respond(small-laptop) {
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            /* 600 */
+            @include respond(tablet-mobile) {
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            .quick-access-inner-container {
+                display: flex;
+                flex-direction: column;
+
+                .quick-access-header {
+                    font-family: $font-bold, sans-serif;
+                    font-size: $font-size-header;
+                    color: #ffffff;
+                    letter-spacing: -0.6px;
+                    line-height: 34px;
+
+
+                    @include respond(large-laptop) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include respond(small-laptop) {
+                        align-self: center;
+                    }
+
+                }
+
+                .quick-access-list {
+                    font-family: $font-bold, sans-serif;
+                    font-size: $font-size-secondary;
+                    line-height: 55px;
+                    letter-spacing: 0;
+                    color: #ffffff;
+                    list-style-position: inside;
+                    
+
+                    /* 1100px */
+                    @include respond(large-laptop) {
+                        font-size: 1rem;
+                    }
+
+                    @include respond(small-laptop) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        line-height: 32px;
+                        justify-content: center;
+                    }
+
+                    .quick-access-list-item {
+                        margin: 0 8px;
+
+                        .quick-access-list-item-link {
+                            color: #ffffff;
+                            @include linx(#ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.swiper-container {
+    height: 400px;
+    width: 65%;
+    color: #ffffff;
+
+
+    /* 950 */
+    @include respond(small-laptop) {
+        width: 100%;
+    }
+
+    /* 600 */
+    @include respond(tablet-mobile) {
+        width: 100%;
+    }
+
+    .swiper-wrapper {
+
+
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+            @include respond(tablet-mobile) {
+                align-items: center;
+            }
+        }
+
+        .swiper-slide-active:before {
+
+            @include respond(tablet-mobile) {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: inherit;
+
+                filter: blur(10px);
+                -moz-filter: blur(10px);
+                -webkit-filter: blur(10px);
+                -o-filter: blur(10px);
+
+                transition: all 2s linear;
+                -moz-transition: all 2s linear;
+                -webkit-transition: all 2s linear;
+                -o-transition: all 2s linear;
+            }
+
+        }
+
+        .swiper-text-overlay-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            padding: 0 10px;
+            margin-left: 24px;
+
+            @include respond(small-laptop) {
+                width: 45vw;
+            }
+
+            @include respond(tablet-mobile) {
+                width: 80vw;
+                position: absolute;
+
+            }
+
+
+            .swiper-slide-text-overlay {
+                letter-spacing: 0;
+                line-height: 32px;
+                text-align: center;
+                color: #424242;
+                font-family: $font-bold;
+                font-size: $font-size-swiper-cta;
+
+                /* 1100px */
+                @include respond(large-laptop) {
+                    font-size: 1.3rem;
+                }
+
+                @include respond(small-laptop) {
+                    font-size: 1.15rem;
+                }
+
+                @include respond(tablet-mobile) {
+                    font-size: 1.1rem;
+                    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+                }
+
+            }
+
+            .swiper-slide-cta-btn {
+                width: 311px;
+                height: 40px;
+                background: #481F5D;
+                border-radius: 24px;
+                border: #481F5D;
+                font-family: $font-normal;
+                font-weight: 500;
+                font-size: $font-size-cta-button;
+                color: #ffffff;
+                margin-top: 20px;
+                
+            }
+        }
+
+
+    }
+
+    .swiper-pagination {
+        border-radius: 14.5px;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 63px !important;
+        height: 29px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+/* Custom Pagination Bullet Styles -- Overrides Pagination Positioning */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    left: 88% !important;
+}

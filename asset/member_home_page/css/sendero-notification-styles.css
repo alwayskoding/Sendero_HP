@@ -1,0 +1,74 @@
+/* Fonts */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../../fonts/Roboto-Fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto-Reg';
+  src: url("../../fonts/Roboto-Fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../../fonts/Roboto-Fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Bold.woff") format("woff");
+}
+
+/* End of Fonts */
+/* Global Variable Styles */
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Start of Member Notification */
+.sendero-homepage-notification-wrapper {
+  width: 100%;
+}
+
+.sendero-homepage-notification-wrapper .sendero-homepage-notification--info {
+  background-color: #CC3366;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content {
+  color: #ffffff;
+  font-family: "Roboto-Light", sans-serif;
+  position: relative;
+  top: 3px;
+}
+
+.sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content a {
+  font-weight: bold;
+  color: inherit;
+  font-family: "Roboto-Reg", sans-serif;
+  text-decoration: none;
+}
+
+.sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content::before {
+  content: url(../img/alert-icon/x@1.5x.svg);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.sendero-homepage-notification-wrapper .sendero-homepage-notification--info .close-btn {
+  width: 20px;
+  height: 20px;
+}
+
+/* End of Member Notification */
+/*# sourceMappingURL=sendero-notification-styles.css.map */

@@ -1,0 +1,86 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src:  url('../../fonts/Roboto-Fonts/Roboto-Light.woff2') format('woff2'),
+          url('../../fonts/Roboto-Fonts/Roboto-Light.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'Roboto-Reg';
+    src:  url('../../fonts/Roboto-Fonts/Roboto-Regular.woff2') format('woff2'),
+          url('../../fonts/Roboto-Fonts/Roboto-Regular.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src:  url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff2'),
+          url('../../fonts/Roboto-Fonts/Roboto-Bold.woff') format('woff');
+}
+
+/* End of Fonts */
+
+/* Global Variable Styles */
+
+$font-bold: 'Roboto-Bold';
+$font-normal: 'Roboto-Reg';
+$font-light: 'Roboto-Light';
+
+
+/* Resets */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Start of Member Notification */
+
+.sendero-homepage-notification-wrapper {
+    width: 100%;
+    
+
+    .sendero-homepage-notification--info {
+        background-color: #CC3366;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .sendero-notification-content {
+            color: #ffffff;
+            font-family: $font-light, sans-serif;
+            position: relative;
+            top: 3px;
+            
+
+            a {
+                font-weight: bold;
+                color: inherit;
+                font-family: $font-normal, sans-serif;
+                text-decoration: none;; 
+            }
+        }
+
+        .sendero-notification-content::before {
+            content: url(../img/alert-icon/x@1.5x.svg);
+            vertical-align: middle;
+            margin-right:8px;
+        }
+
+        .close-btn {
+            width: 20px;
+            height: 20px;
+        }
+
+        
+    } 
+}
+
+/* End of Member Notification */
+

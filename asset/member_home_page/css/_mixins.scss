@@ -1,0 +1,80 @@
+// respond is the name of your mixin
+
+@mixin respond ($breakpoint) {
+
+    // $breakpoint is simply a variable that can have several values
+
+    @if $breakpoint==large-laptop {
+
+        // here `laptop` is the value of $breakpoint
+        // when call laptop, we mean the following piece of code        
+
+        @media only screen and (max-width: 1100px) and (min-width: 951px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==small-laptop {
+
+        // here `laptop` is the value of $breakpoint
+        // when call laptop, we mean the following piece of code        
+
+        @media only screen and (max-width: 950px) and (min-width: 601px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==tablet-mobile {
+
+        // here `laptop` is the value of $breakpoint
+        // when call laptop, we mean the following piece of code        
+
+        @media only screen and (max-width: 600px) and (min-width: 320px) {
+            @content;
+        }
+    }
+
+    /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+
+/*=== Button States ===*/
+
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px lightskyblue;
+    }
+  }
+
+
+/*=== Link Styles ===*/
+
+@mixin linx ($link, $visit, $focus, $hover, $active) {
+      color: $link;
+      &:visited {
+        color: $visit;
+      }
+      &:focus {
+        color: $focus;
+      }
+      &:hover {
+        color: $hover; 
+        text-decoration: underline;  
+      }
+      &:active {
+        color: $active;
+      }
+  }

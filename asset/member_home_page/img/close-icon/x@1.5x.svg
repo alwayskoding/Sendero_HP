@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D16149B5-E209-4402-B3D9-497509CA61B4@1.5x</title>
+    <defs>
+        <polygon id="path-1" points="17 8.52820513 11.492891 8.52820513 11.492891 3 8.507109 3 8.507109 8.52820513 3 8.52820513 3 11.4717949 8.507109 11.4717949 8.507109 17 11.492891 17 11.492891 11.4717949 17 11.4717949"></polygon>
+    </defs>
+    <g id="Selected---use-these" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page" transform="translate(-1313.000000, -185.000000)">
+            <g id="alert-bar" transform="translate(95.000000, 170.000000)">
+                <g id="icons/x" transform="translate(1218.000000, 15.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape-2" fill="#0074E1" fill-rule="nonzero" transform="translate(10.000000, 10.000000) rotate(-315.000000) translate(-10.000000, -10.000000) " xlink:href="#path-1"></use>
+                    <g id="color/primary/blue" mask="url(#mask-2)" fill="#FFFFFF">
+                        <g transform="translate(-2.500000, -2.500000)" id="Rectangle-Copy-5">
+                            <rect x="0" y="0" width="25" height="25"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
