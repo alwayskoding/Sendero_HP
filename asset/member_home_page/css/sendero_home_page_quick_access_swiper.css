@@ -408,7 +408,6 @@
 .swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-cta-btn {
   width: 311px;
   height: 40px;
-  background: #481F5D;
   border-radius: 24px;
   border: #481F5D;
   font-family: "Roboto-Reg";
@@ -416,6 +415,23 @@
   font-size: 1rem;
   color: #ffffff;
   margin-top: 20px;
+  background: #481F5D;
+}
+
+.swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-cta-btn:hover {
+  background: #30153e;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-cta-btn:active {
+  background: #1c0c24;
+}
+
+.swiper-container .swiper-wrapper .swiper-text-overlay-container .swiper-slide-cta-btn:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 3px lightskyblue;
+          box-shadow: 0 0 0 3px lightskyblue;
 }
 
 .swiper-container .swiper-pagination {

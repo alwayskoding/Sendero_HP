@@ -51,7 +51,7 @@
       transition: all 0.3s ease;
     }
     &:active {
-      background:darken($bg,25%);
+      background:darken($bg,15%);
     } 
     &:focus {
       outline: none;
