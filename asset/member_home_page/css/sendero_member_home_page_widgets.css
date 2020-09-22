@@ -1,17 +1,17 @@
 /* Fonts */
 @font-face {
   font-family: 'Roboto-Light';
-  src: url("../../fonts/Roboto-Fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Light.woff") format("woff");
+  src: url("/asset/sendero_member_home_page/fonts/Roboto%2DLight.woff2") format("woff2"), url("/asset/sendero_member_home_page/fonts/Roboto%2DL.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Roboto-Reg';
-  src: url("../../fonts/Roboto-Fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Regular.woff") format("woff");
+  src: url("/asset/sendero_member_home_page/fonts/Roboto%2DRegular.woff2") format("woff2"), url("/asset/sendero_member_home_page/fonts/Roboto%2DR.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Roboto-Bold';
-  src: url("../../fonts/Roboto-Fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Bold.woff2") format("woff");
+  src: url("/asset/sendero_member_home_page/fonts/Roboto%2DBold.woff2") format("woff2"), url("/asset/sendero_member_home_page/fonts/Roboto%2DB.woff") format("woff");
 }
 
 /* End of Fonts */
@@ -27,12 +27,12 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 :root {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 /* Begin Widget Styles */
@@ -52,7 +52,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90%;
+  width: 100%;
   /* Media Queries - Sets Widgets To Stack On Smaller and Mobile Devices */
   /* @if $breakpoint==mobile {
         @media only screen and (max-width: 375px) {
@@ -67,8 +67,7 @@
 }
 
 .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
-  margin: 10px;
-  width: 405px;
+  width: 100%;
   overflow: hidden;
   position: relative;
   display: -webkit-box;
@@ -80,12 +79,6 @@
           flex-direction: column;
   background: #ffffff;
   border: 1px solid #d5d5d5;
-  /* Media Queries - Removing extra Margin On Smaller and Mobile Devices */
-  /* @if $breakpoint==mobile {
-        @media only screen and (max-width: 375px) {
-            @content;
-        }
-    } */
   /* @if $breakpoint==mobile {
         @media only screen and (max-width: 375px) {
             @content;
@@ -104,12 +97,6 @@
     } */
 }
 
-@media only screen and (max-width: 950px) and (min-width: 601px) {
-  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
-    margin: 10px 0;
-  }
-}
-
 @media only screen and (max-width: 600px) and (min-width: 320px) {
   .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
     margin: 10px 0;
@@ -122,37 +109,60 @@
 
 .widget-container-outer-wrapper .widget-container-inner-wrapper .widget h3 {
   margin-top: 20px;
+  margin-bottom: 0 !important;
   text-align: center;
   letter-spacing: 0;
   line-height: 32px;
-  font-family: "Roboto-Bold";
-  color: #333333;
+  font-family: "Roboto-Bold" !important;
+  color: #333333 !important;
 }
 
 .widget-container-outer-wrapper .widget-container-inner-wrapper .widget p {
   text-align: center;
-  margin: 10px auto 10px;
+  margin: 0px auto 10px;
   max-width: 90%;
   height: 53px;
-  font-family: "Roboto-Reg";
-  font-size: 1rem;
+  font-family: "Roboto-Reg" !important;
+  font-size: 1rem !important !important;
   letter-spacing: 0;
   line-height: 20px;
-  color: #333333;
+  color: #333333 !important;
   position: relative;
   top: 5px;
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget p {
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget p {
+    margin-top: 10px !important;
+  }
 }
 
 .widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn {
-  font-family: "Roboto-Reg";
-  font-size: 1rem;
+  font-family: "Roboto-Reg" !important;
+  font-size: 1rem !important !important;
   cursor: pointer;
   padding: 0.25em 0.75em;
   position: relative;
   width: 156px;
-  margin: 10px auto 20px;
+  margin: 15px auto 20px;
   border-radius: 20px;
-  color: #ffffff;
+  color: #ffffff !important;
   text-align: center;
   line-height: 21px;
   letter-spacing: 0;
@@ -169,6 +179,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
 }
 
 .widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn:hover {
@@ -187,8 +202,14 @@
           box-shadow: 0 0 0 3px lightskyblue;
 }
 
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn {
+    margin: 0px auto 30px !important;
+  }
+}
+
 .widget-container-outer-wrapper .widget-container-inner-wrapper .widget .widget-cta-btn::after {
-  content: url(../img/arrows/navigate_next-white-24dp.svg);
+  content: url(/asset/sendero_member_home_page/img/arrow/navigate%5Fnext%5Fwhite%5F24dp.svg);
   margin-top: 5px;
 }
 
@@ -201,6 +222,45 @@
 @media only screen and (max-width: 600px) and (min-width: 320px) {
   .widget-container-outer-wrapper .widget-container-inner-wrapper .widget {
     width: 100%;
+    margin: 5px 0 !important;
+  }
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(2) {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(2),
+.widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(3) {
+  /* Widgets Stack Here */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(2),
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(3) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(2),
+  .widget-container-outer-wrapper .widget-container-inner-wrapper .widget:nth-child(3) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 20px !important;
   }
 }
 
@@ -222,6 +282,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+/* Browser Specific Styles */
+/*  IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .widget p {
+    left: 20px !important;
   }
 }
 /*# sourceMappingURL=sendero_member_home_page_widgets.css.map */

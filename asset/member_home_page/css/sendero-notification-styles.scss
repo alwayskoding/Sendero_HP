@@ -1,24 +1,27 @@
 /* Fonts */
-
 @font-face {
     font-family: 'Roboto-Light';
-    src:  url('../../fonts/Roboto-Fonts/Roboto-Light.woff2') format('woff2'),
-          url('../../fonts/Roboto-Fonts/Roboto-Light.woff') format('woff');
-  }
+    src: url('/asset/sendero_member_home_page/fonts/Roboto%2DLight.woff2') format('woff2'),
+        url('/asset/sendero_member_home_page/fonts/Roboto%2DL.woff') format('woff');
+}
 
 @font-face {
     font-family: 'Roboto-Reg';
-    src:  url('../../fonts/Roboto-Fonts/Roboto-Regular.woff2') format('woff2'),
-          url('../../fonts/Roboto-Fonts/Roboto-Regular.woff') format('woff');
-  }
+    src: url('/asset/sendero_member_home_page/fonts/Roboto%2DRegular.woff2') format('woff2'),
+        url('/asset/sendero_member_home_page/fonts/Roboto%2DR.woff') format('woff');
+}
 
 @font-face {
     font-family: 'Roboto-Bold';
-    src:  url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff2'),
-          url('../../fonts/Roboto-Fonts/Roboto-Bold.woff') format('woff');
+    src: url('/asset/sendero_member_home_page/fonts/Roboto%2DBold.woff2') format('woff2'),
+        url('/asset/sendero_member_home_page/fonts/Roboto%2DB.woff') format('woff');
 }
 
 /* End of Fonts */
+
+/* Imported _Mixins For Media Queries ==== 
+========================================*/
+@import "../css/mixins";
 
 /* Global Variable Styles */
 
@@ -42,7 +45,6 @@ $font-light: 'Roboto-Light';
 
 .sendero-homepage-notification-wrapper {
     width: 100%;
-    
 
     .sendero-homepage-notification--info {
         background-color: #CC3366;
@@ -53,24 +55,37 @@ $font-light: 'Roboto-Light';
         
 
         .sendero-notification-content {
-            color: #ffffff;
-            font-family: $font-light, sans-serif;
+            color: #ffffff !important;
+            font-family: $font-light, sans-serif !important;
             position: relative;
             top: 3px;
+
+            @include respond(medium-notification) {
+                text-align: center;
+                font-size: 14px !important;
+            }
+
+            @include respond(small-notification) {
+                text-align: left;
+            }
             
 
             a {
-                font-weight: bold;
-                color: inherit;
-                font-family: $font-normal, sans-serif;
+                font-weight: bold !important;
+                color: inherit !important;
+                font-family: $font-normal, sans-serif !important;
                 text-decoration: none;; 
             }
         }
 
         .sendero-notification-content::before {
-            content: url(../img/alert-icon/x@1.5x.svg);
+            content: url(/asset/sendero_member_home_page/img/icons/x%401%2E5x.svg);
             vertical-align: middle;
             margin-right:8px;
+
+            @include respond(notification-icon-small) {
+                display: none;
+            }
         }
 
         .close-btn {
@@ -83,4 +98,69 @@ $font-light: 'Roboto-Light';
 }
 
 /* End of Member Notification */
+
+// At Specific Browser Rules 
+
+// Firefox
+@-moz-document url-prefix() {
+    .sendero-notification-content {
+        top: 0 !important;
+    }
+
+    .sendero-notification-content::before {
+        position: relative !important;
+        top: 5px !important;
+    }
+
+}
+
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .sendero-notification-content {
+        top: 0 !important;
+    }
+
+    .sendero-notification-content::before {
+        position: relative !important;
+        top: 5px !important;
+    }
+}}
+
+/* Safari 10.1 */
+@media not all and (min-resolution:.001dpcm){ 
+@supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+    .sendero-notification-content {
+        top: 0 !important;
+    }
+
+    .sendero-notification-content::before {
+        position: relative !important;
+        top: 5px !important;
+    }
+}}
+
+/*  IE10+ */
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .sendero-notification-content {
+        top: 0 !important;
+    }
+
+    .sendero-notification-content::before {
+        position: relative !important;
+        top: 5px !important;
+    }
+ }
+
+ /* Chrome, Safari, and also the Edge Browser and Firefox */
+ @supports (-ms-ime-align:auto) {
+    .sendero-notification-content {
+        top: 0 !important;
+    }
+
+    .sendero-notification-content::before {
+        position: relative !important;
+        top: 5px !important;
+    }
+}
 

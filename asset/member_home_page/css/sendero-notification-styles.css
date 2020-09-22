@@ -1,20 +1,24 @@
 /* Fonts */
 @font-face {
   font-family: 'Roboto-Light';
-  src: url("../../fonts/Roboto-Fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Light.woff") format("woff");
+  src: url("/asset/sendero_member_home_page/fonts/Roboto%2DLight.woff2") format("woff2"), url("/asset/sendero_member_home_page/fonts/Roboto%2DL.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Roboto-Reg';
-  src: url("../../fonts/Roboto-Fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Regular.woff") format("woff");
+  src: url("/asset/sendero_member_home_page/fonts/Roboto%2DRegular.woff2") format("woff2"), url("/asset/sendero_member_home_page/fonts/Roboto%2DR.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Roboto-Bold';
-  src: url("../../fonts/Roboto-Fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Fonts/Roboto-Bold.woff") format("woff");
+  src: url("/asset/sendero_member_home_page/fonts/Roboto%2DBold.woff2") format("woff2"), url("/asset/sendero_member_home_page/fonts/Roboto%2DB.woff") format("woff");
 }
 
 /* End of Fonts */
+/* Imported _Mixins For Media Queries ==== 
+========================================*/
+/*=== Button States ===*/
+/*=== Link Styles ===*/
 /* Global Variable Styles */
 /* Resets */
 *,
@@ -46,23 +50,57 @@
 }
 
 .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content {
-  color: #ffffff;
-  font-family: "Roboto-Light", sans-serif;
+  color: #ffffff !important;
+  font-family: "Roboto-Light", sans-serif !important;
   position: relative;
   top: 3px;
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+@media only screen and (max-width: 743px) and (min-width: 320px) {
+  .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content {
+    text-align: center;
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) and (min-width: 320px) {
+  .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content {
+    text-align: left;
+  }
 }
 
 .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content a {
-  font-weight: bold;
-  color: inherit;
-  font-family: "Roboto-Reg", sans-serif;
+  font-weight: bold !important;
+  color: inherit !important;
+  font-family: "Roboto-Reg", sans-serif !important;
   text-decoration: none;
 }
 
 .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content::before {
-  content: url(../img/alert-icon/x@1.5x.svg);
+  content: url(/asset/sendero_member_home_page/img/icons/x%401%2E5x.svg);
   vertical-align: middle;
   margin-right: 8px;
+  /* @if $breakpoint==mobile {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } */
+}
+
+@media only screen and (max-width: 670px) and (min-width: 320px) {
+  .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .sendero-notification-content::before {
+    display: none;
+  }
 }
 
 .sendero-homepage-notification-wrapper .sendero-homepage-notification--info .close-btn {
@@ -71,4 +109,61 @@
 }
 
 /* End of Member Notification */
+@-moz-document url-prefix() {
+  .sendero-notification-content {
+    top: 0 !important;
+  }
+  .sendero-notification-content::before {
+    position: relative !important;
+    top: 5px !important;
+  }
+}
+
+/* Safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .sendero-notification-content {
+      top: 0 !important;
+    }
+    .sendero-notification-content::before {
+      position: relative !important;
+      top: 5px !important;
+    }
+  }
+}
+
+/* Safari 10.1 */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+    .sendero-notification-content {
+      top: 0 !important;
+    }
+    .sendero-notification-content::before {
+      position: relative !important;
+      top: 5px !important;
+    }
+  }
+}
+
+/*  IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .sendero-notification-content {
+    top: 0 !important;
+  }
+  .sendero-notification-content::before {
+    position: relative !important;
+    top: 5px !important;
+  }
+}
+
+/* Chrome, Safari, and also the Edge Browser and Firefox */
+@supports (-ms-ime-align: auto) {
+  .sendero-notification-content {
+    top: 0 !important;
+  }
+  .sendero-notification-content::before {
+    position: relative !important;
+    top: 5px !important;
+  }
+}
 /*# sourceMappingURL=sendero-notification-styles.css.map */

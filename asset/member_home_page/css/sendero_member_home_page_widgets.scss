@@ -1,20 +1,20 @@
 /* Fonts */
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('../../fonts/Roboto-Fonts/Roboto-Light.woff2') format('woff2'),
-        url('../../fonts/Roboto-Fonts/Roboto-Light.woff') format('woff');
+    src: url('/asset/sendero_member_home_page/fonts/Roboto%2DLight.woff2') format('woff2'),
+        url('/asset/sendero_member_home_page/fonts/Roboto%2DL.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Roboto-Reg';
-    src: url('../../fonts/Roboto-Fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../../fonts/Roboto-Fonts/Roboto-Regular.woff') format('woff');
+    src: url('/asset/sendero_member_home_page/fonts/Roboto%2DRegular.woff2') format('woff2'),
+        url('/asset/sendero_member_home_page/fonts/Roboto%2DR.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Roboto-Bold';
-    src: url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../../fonts/Roboto-Fonts/Roboto-Bold.woff2') format('woff');
+    src: url('/asset/sendero_member_home_page/fonts/Roboto%2DBold.woff2') format('woff2'),
+        url('/asset/sendero_member_home_page/fonts/Roboto%2DB.woff') format('woff');
 }
 
 /* End of Fonts */
@@ -31,20 +31,20 @@ $font-light: 'Roboto-Light';
 
 /* Font Sizes ================
 =========Sizes==============*/
-$font-size-cta-button: 1rem;
-$font-size-widget-content-text: 1rem;
-$font-size-widget-headers: 1.5rem;
+$font-size-cta-button: 1rem !important;
+$font-size-widget-content-text: 1rem !important;
+$font-size-widget-headers: 1.5rem !important;
 
 
 /* Resets */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 :root {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 
@@ -57,22 +57,16 @@ $font-size-widget-headers: 1.5rem;
     .widget-container-inner-wrapper {
         display: flex;
         justify-content: center;
-        width: 90%;
+        width: 100%;
 
         .widget {
-            margin: 10px;
-            width: 405px;
+            width: 100%;
             overflow: hidden;
             position: relative;
             display: flex;
             flex-direction: column;
             background: #ffffff;
             border: 1px solid #d5d5d5;
-
-            /* Media Queries - Removing extra Margin On Smaller and Mobile Devices */ 
-            @include respond(small-laptop) {
-                margin: 10px 0;
-            }
 
             @include respond(tablet-mobile) {
                 margin: 10px 0;
@@ -84,39 +78,49 @@ $font-size-widget-headers: 1.5rem;
 
             h3 {
                 margin-top: 20px;
+                margin-bottom: 0 !important;
                 text-align: center;
                 letter-spacing: 0;
                 line-height: 32px;
-                font-family: $font-bold;
-                color: #333333;
+                font-family: $font-bold !important;
+                color: #333333 !important;
             }
 
             p {
                 text-align: center;
-                margin: 10px auto 10px;
+                margin: 0px auto 10px;
                 max-width: 90%;
                 height: 53px;
-                font-family: $font-normal;
-                font-size: $font-size-widget-content-text;
+                font-family: $font-normal !important;
+                font-size: $font-size-widget-content-text !important;
                 letter-spacing: 0;
                 line-height: 20px;
-                color: #333333;
+                color: #333333 !important;
                 position: relative;
                 top: 5px;
+
+
+                @include respond(tablet-mobile) {
+                    height: 30px;
+                }
+
+                @include respond(small-laptop) {
+                    margin-top: 10px !important;
+                }
 
 
             }
 
             .widget-cta-btn {
-                font-family: $font-normal;
-                font-size: $font-size-cta-button;
+                font-family: $font-normal !important;
+                font-size: $font-size-cta-button !important;
                 cursor: pointer;
                 padding: 0.25em 0.75em;
                 position: relative;
                 width: 156px;
-                margin: 10px auto 20px;
+                margin: 15px auto 20px;
                 border-radius: 20px;
-                color: #ffffff;
+                color: #ffffff !important;
                 text-align: center;
                 line-height: 21px;
                 letter-spacing: 0;
@@ -128,16 +132,19 @@ $font-size-widget-headers: 1.5rem;
                 justify-content: center;
                 align-items: center;
 
-
+                @include respond(small-laptop) {
+                    margin: 0px auto 30px !important;
+                }
 
 
                 &::after {
-                    content: url(../img/arrows/navigate_next-white-24dp.svg);
+                    content: url(/asset/sendero_member_home_page/img/arrow/navigate%5Fnext%5Fwhite%5F24dp.svg);
                     margin-top: 5px;
                 }
 
 
             }
+
             /* Media Queries - Spans Widgets Across The Page Responsively */
             @include respond(small-laptop) {
                 width: 100%;
@@ -145,8 +152,32 @@ $font-size-widget-headers: 1.5rem;
 
             @include respond(tablet-mobile) {
                 width: 100%;
+                margin: 5px 0 !important;
             }
         }
+
+        .widget:nth-child(2) {
+            margin-left: 20px !important;
+            margin-right: 20px !important;
+        }
+
+        .widget:nth-child(2),
+        .widget:nth-child(3) {
+
+            /* Widgets Stack Here */
+            @include respond(small-laptop) {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-top: 20px !important;
+            }
+
+            @include respond(tablet-mobile) {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-top: 20px !important;
+            }
+        }
+
         /* Media Queries - Sets Widgets To Stack On Smaller and Mobile Devices */
         @include respond(small-laptop) {
             flex-direction: column;
@@ -155,6 +186,20 @@ $font-size-widget-headers: 1.5rem;
 
         @include respond(tablet-mobile) {
             flex-direction: column;
+        }
+    }
+}
+
+/* Browser Specific Styles */
+
+/*  IE10+ */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
+    .widget {
+
+        p {
+            left: 20px !important;
         }
     }
 }

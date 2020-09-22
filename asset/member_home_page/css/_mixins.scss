@@ -24,12 +24,39 @@
         }
     }
 
+    @if $breakpoint==medium-notification {
+
+        // created as an inbetween for notifications at smaller sizes      
+
+        @media only screen and (max-width: 743px) and (min-width: 320px) {
+            @content;
+        }
+    }
+
     @if $breakpoint==tablet-mobile {
 
         // here `laptop` is the value of $breakpoint
         // when call laptop, we mean the following piece of code        
 
         @media only screen and (max-width: 600px) and (min-width: 320px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==notification-icon-small {
+
+        // Icon Display On / Off        
+
+        @media only screen and (max-width: 670px) and (min-width: 320px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==small-notification {
+
+        // Small Notification Remove Icon For Space      
+
+        @media only screen and (max-width: 450px) and (min-width: 320px) {
             @content;
         }
     }
